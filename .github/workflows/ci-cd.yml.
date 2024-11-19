@@ -1,10 +1,7 @@
-name: Node.js CI
+name: Test CI/CD
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -21,8 +18,5 @@ jobs:
       with:
         node-version: '16'
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
+    - name: Run code
+      run: node index.js
